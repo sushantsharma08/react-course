@@ -1,5 +1,3 @@
-
-
 export const Task = (props) => {
     return (
         <div className='task'>
