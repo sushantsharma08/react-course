@@ -23,6 +23,7 @@ const App = () => {
     { name: 'Uranus', isGasPlanet: true }
   ]
 
+  // age part
   const [Age, setAge] = useState(0);
   const incAge=()=>{
     setAge(Age+1)
@@ -33,11 +34,22 @@ const App = () => {
   const setToZero = ()=>{
     setAge(0)
   }
+  // text part
   const [Text, setText] = useState('')
   const changeText=(e)=>{
     // console.log(e.target.value);
     setText(e.target.value)
   }
+
+  // todo part
+  const [TodoList, setTodoList] = useState([])
+  const [newTask, setnewTask] = useState('')
+   const handleChange=(e)=>{
+    setnewTask(e.target.value);
+   }
+   const addTask = ()=>{
+    setTodoList([...TodoList,newTask]);
+   }
 
   return (
     <div className='App'>
@@ -69,7 +81,21 @@ const App = () => {
         {Text}
 
       </div>
+      <br />
+      <hr />
+      <br />
+      ToDo Functionality
 
+      <div className="newTask">
+        <input type="text" onChange={handleChange}/>
+        <button onClick={addTask}>Add Task</button>
+      </div>
+
+      <div className="list">
+      {TodoList.map((task)=>{
+       return <h1>{task}</h1>
+      })}
+      </div>
     </div>
   )
 }
