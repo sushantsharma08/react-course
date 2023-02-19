@@ -27,6 +27,12 @@ const App = () => {
   const incAge=()=>{
     setAge(Age+1)
   }
+  const decAge = ()=>{
+    setAge(Age-1)
+  }
+  const setToZero = ()=>{
+    setAge(0)
+  }
   const [Text, setText] = useState('')
   const changeText=(e)=>{
     // console.log(e.target.value);
@@ -40,18 +46,22 @@ const App = () => {
       })}
       <br />
 
+      <hr />
       printing Gas planets only
-
       <br />
       {planets.map((planet, key) => {
         return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
       })}
       <br />
 
+      <hr />
+      ep4 : SetState
       <div className="stateExapmple">
         {Age}
         <br />
         <button onClick={incAge}>Increase Age</button>
+        <button onClick={decAge}>Decrease Age</button>
+        <button onClick={setToZero}>Set Age to 0</button>
 
         <br />
         <input type="text" onChange={changeText} />
