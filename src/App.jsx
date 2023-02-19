@@ -27,11 +27,16 @@ const App = () => {
   const incAge=()=>{
     setAge(Age+1)
   }
+  const [Text, setText] = useState('')
+  const changeText=(e)=>{
+    // console.log(e.target.value);
+    setText(e.target.value)
+  }
 
   return (
     <div className='App'>
       {users.map((user, key) => {
-        return <User name={user.name} age={user.age} />
+        return <User key={key} name={user.name} age={user.age} />
       })}
       <br />
 
@@ -39,13 +44,19 @@ const App = () => {
 
       <br />
       {planets.map((planet, key) => {
-        return <Planet name={planet.name} isGasPlanet={planet.isGasPlanet} />
+        return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
       })}
       <br />
 
       <div className="stateExapmple">
         {Age}
+        <br />
         <button onClick={incAge}>Increase Age</button>
+
+        <br />
+        <input type="text" onChange={changeText} />
+        <br />
+        {Text}
 
       </div>
 
