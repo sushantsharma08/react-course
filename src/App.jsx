@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState,useRef} from 'react'
 import { User } from './User'
 import { Planet } from './Planet'
 
@@ -50,6 +50,18 @@ const App = () => {
    const addTask = ()=>{
     setTodoList([...TodoList,newTask]);
    }
+   const deleteTask=(taskName)=>{
+    setTodoList(TodoList.filter((task)=>{
+      if (task===taskName) {
+        return false
+      }else{
+        return true;
+      }
+    }))
+   }
+   const done=(taskName)=>{
+    
+   }
 
   return (
     <div className='App'>
@@ -93,7 +105,13 @@ const App = () => {
 
       <div className="list">
       {TodoList.map((task)=>{
-       return <h1>{task}</h1>
+       return  (
+        <div className='task'>
+          <h2 >{task}</h2>
+          <button onClick={()=>deleteTask(task)}>Delete task</button>
+          <button onClick={()=>done(task)}>Task Done</button>
+        </div>
+       )
       })}
       </div>
     </div>
