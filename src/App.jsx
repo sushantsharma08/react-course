@@ -49,14 +49,15 @@ const App = () => {
    }
    const addTask = ()=>{
     const task={
-      id: TodoList.length===0?1:TodoList[TodoList.length-1].length +1,
+      id: TodoList.length===0?1:TodoList[TodoList.length-1].id +1,
       taskName:newTask,
     }
     setTodoList([...TodoList,task]);
    }
-   const deleteTask=(taskName)=>{
+   const deleteTask=(id)=>{
     setTodoList(TodoList.filter((task)=>{
-      if (task===taskName) {
+      if (task.id==id) {
+        console.log(id);
         return false
       }else{
         return true;
@@ -111,8 +112,8 @@ const App = () => {
       {TodoList.map((task)=>{
        return  (
         <div className='task'>
-          <h2 >{task.taskName}</h2>
-          <button onClick={()=>deleteTask(task)}>Delete task</button>
+          <h2 >{task.taskName}{task.id}</h2>
+          <button onClick={()=>deleteTask(task.id)}>Delete task</button>
           <button onClick={()=>done(task)}>Task Done</button>
         </div>
        )
