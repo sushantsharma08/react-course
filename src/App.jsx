@@ -48,7 +48,11 @@ const App = () => {
     setnewTask(e.target.value);
    }
    const addTask = ()=>{
-    setTodoList([...TodoList,newTask]);
+    const task={
+      id: TodoList.length===0?1:TodoList[TodoList.length-1].length +1,
+      taskName:newTask,
+    }
+    setTodoList([...TodoList,task]);
    }
    const deleteTask=(taskName)=>{
     setTodoList(TodoList.filter((task)=>{
@@ -107,7 +111,7 @@ const App = () => {
       {TodoList.map((task)=>{
        return  (
         <div className='task'>
-          <h2 >{task}</h2>
+          <h2 >{task.taskName}</h2>
           <button onClick={()=>deleteTask(task)}>Delete task</button>
           <button onClick={()=>done(task)}>Task Done</button>
         </div>
