@@ -1,6 +1,7 @@
 import React , {useState,useRef} from 'react'
 import { User } from './User'
 import { Planet } from './Planet'
+import {Task} from './Task'
 
 import './App.css'
 
@@ -110,13 +111,7 @@ const App = () => {
 
       <div className="list">
       {TodoList.map((task)=>{
-       return  (
-        <div className='task'>
-          <h2 >{task.taskName}{task.id}</h2>
-          <button onClick={()=>deleteTask(task.id)}>Delete task</button>
-          <button onClick={()=>done(task)}>Task Done</button>
-        </div>
-       )
+       return  <Task taskName={task.taskName} id={task.id} deleteTask={deleteTask} />
       })}
       </div>
     </div>
