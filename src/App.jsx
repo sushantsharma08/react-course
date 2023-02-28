@@ -6,13 +6,12 @@ import {Task} from './Task'
 import './App.css'
 
 const App = () => {
-
-
+ 
   const users = [
     { name: 'sushant', age: 20 },
     { name: 'ankit', age: 20 },
     { name: 'sparsh', age: 20 },
-    { name: 'pathak', age: 20 },
+    { name: 'pathak', age: 20 }
   ]
 
   const planets = [
