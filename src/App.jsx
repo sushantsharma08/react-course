@@ -67,8 +67,10 @@ const App = () => {
   }
   const done = (id) => {
     setTodoList(TodoList.map((task)=>{
-      if (id==task.id) {
-        task.completed=true;
+      if (task.id===id) {
+        return({...task,completed:true});
+      }else{
+        return task
       }
     }))
   }
@@ -115,7 +117,7 @@ const App = () => {
 
       <div className="list">
         {TodoList.map((task) => {
-          return <Task taskName={task.taskName} id={task.id} deleteTask={deleteTask} done={done} />
+          return <Task taskName={task.taskName} id={task.id} deleteTask={deleteTask} done={done} complete={task.completed} />
         })}
       </div>
     </div>
