@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef,useEffect } from 'react'
 import { User } from './User'
 import { Planet } from './Planet'
 import { Task } from './Task'
@@ -76,6 +76,11 @@ const App = () => {
   }
 
     // component lifecycle and useEffect
+
+    useEffect(() => {
+      console.log(`something changed`);
+    },[TodoList] )
+    
 
   return (
     <div className='App'>
