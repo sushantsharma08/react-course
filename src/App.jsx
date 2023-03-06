@@ -79,6 +79,10 @@ const App = () => {
 
     useEffect(() => {
       console.log(`something changed`);
+
+      return (()=>{
+        // document.write('todochanged')
+      })
     },[TodoList] )
     
 
