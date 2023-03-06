@@ -75,6 +75,8 @@ const App = () => {
     }))
   }
 
+    // component lifecycle and useEffect
+
   return (
     <div className='App'>
       {users.map((user, key) => {
