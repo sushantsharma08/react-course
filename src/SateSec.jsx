@@ -24,8 +24,10 @@ export const StateSec = () => {
   return (
     <div>
       ep4 : SetState
-
-      {Age}
+      <br />
+      <h1>
+        {Age}
+      </h1>
       <br />
       <button onClick={incAge}>Increase Age</button>
       <button onClick={decAge}>Decrease Age</button>
