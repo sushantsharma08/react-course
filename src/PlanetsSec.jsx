@@ -16,6 +16,8 @@ export const PlanetsSec = () => {
 
     return (
         <div>
+            printing Gas planets only
+
             {planets.map((planet, key) => {
                 return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
             })}

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 export const StateSec = () => {
 
@@ -20,20 +20,21 @@ export const StateSec = () => {
     setText(e.target.value)
   }
 
-  
+
   return (
     <div>
-              {Age}
-        <br />
-        <button onClick={incAge}>Increase Age</button>
-        <button onClick={decAge}>Decrease Age</button>
-        <button onClick={setToZero}>Set Age to 0</button>
-        <br />
-        <input type="text" onChange={changeText} />
-        <br />
-        {Text}
+      ep4 : SetState
+
+      {Age}
+      <br />
+      <button onClick={incAge}>Increase Age</button>
+      <button onClick={decAge}>Decrease Age</button>
+      <button onClick={setToZero}>Set Age to 0</button>
+      <br />
+      <input type="text" onChange={changeText} />
+      <br />
+      {Text}
     </div>
   )
 }
 
- 
