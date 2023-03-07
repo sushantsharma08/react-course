@@ -1,23 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Navigation = () => {
   return (
     <div>
         <ul>
             <li>
-                <a to='/'>Home</a>
+                <Link to='/'>Home</Link>
             </li>
             <li>
-                <a to='/users'>Users</a>
+                <Link to='/users'>Users</Link>
             </li>
             <li>
-                <a to='/planets'>Planets</a>
+                <Link to='/planets'>Planets</Link>
             </li>
             <li>
-                <a to='/state'>useState</a>
+                <Link to='/usestate'>useState</Link>
             </li>
             <li>
-                <a to='/todo'>Todo</a>
+                <Link to='/todo'>Todo</Link>
             </li>
         </ul>
     </div>

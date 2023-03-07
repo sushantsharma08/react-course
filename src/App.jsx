@@ -4,6 +4,8 @@ import { PlanetsSec } from './PlanetsSec'
 import { StateSec } from './SateSec'
 import { Todo } from './Todo'
 import { Navigation } from './Navigation'
+import { Route, Routes } from 'react-router-dom'
+
 import './App.css'
 
 const App = () => {
@@ -25,11 +27,21 @@ const App = () => {
 
   return (
     <div className='App'>
-      {/* <UserSec/> */}
-      {/* <PlanetsSec/> */}
-      {/* <StateSec/> */}
-      {/* <Todo /> */}
-      <Navigation/>
+      <Navigation />
+      <br />
+      <br />
+      <hr />
+      <br />
+      <Routes>
+        {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/' element={<UserSec />} />
+        <Route path='/users' element={<UserSec />} />
+        <Route path='/planets' element={<PlanetsSec />} />
+        <Route path='/usestate' element={<StateSec />} />
+        <Route path='/todo' element={<Todo />} />
+      </Routes>
+      <br />
+      <hr />
     </div>
   )
 }
