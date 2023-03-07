@@ -3,8 +3,7 @@ import { UserSec } from './UserSec'
 import { PlanetsSec } from './PlanetsSec'
 import { StateSec } from './SateSec'
 import { Todo } from './Todo'
-import { Task } from './Task'
-
+import { Navigation } from './Navigation'
 import './App.css'
 
 const App = () => {
@@ -30,6 +29,7 @@ const App = () => {
       {/* <PlanetsSec/> */}
       {/* <StateSec/> */}
       {/* <Todo /> */}
+      <Navigation/>
     </div>
   )
 }
