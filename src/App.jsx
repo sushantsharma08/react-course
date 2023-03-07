@@ -1,4 +1,5 @@
 import React from 'react'
+import { Home } from "./Home";
 import { UserSec } from './UserSec'
 import { PlanetsSec } from './PlanetsSec'
 import { StateSec } from './SateSec'
@@ -34,7 +35,7 @@ const App = () => {
       <br />
       <Routes>
         {/* <Route path='/' element={<Home />} /> */}
-        <Route path='/' element={<UserSec />} />
+        <Route path='/' element={<Home />} />
         <Route path='/users' element={<UserSec />} />
         <Route path='/planets' element={<PlanetsSec />} />
         <Route path='/usestate' element={<StateSec />} />
