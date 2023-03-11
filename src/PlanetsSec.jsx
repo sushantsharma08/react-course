@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Planet } from './Planet'
 
 
@@ -13,14 +13,49 @@ export const PlanetsSec = () => {
         { name: 'Uranus', isGasPlanet: true }
     ]
 
+    const showOtherPlanets = () => {
+        planets.map((p) => {
+            p.isGasPlanet = !p.isGasPlanet
+            console.log(p.name, p.isGasPlanet);
+        }
+        )
+        // document.querySelector('.output').innerHTML(
+        //     <div>
+        //     {planets.map((planet, key) => {
+        //         return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
+        //     })}
+        // </div>
+        // )
+    }
+
+    useEffect(() => {
+        return () => {
+
+        }
+    }, [planets])
 
     return (
-        <div>
-            printing Gas planets only
+        <>
 
-            {planets.map((planet, key) => {
-                return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
-            })}
-        </div>
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                <div className="allPlanets">
+                    printing All planets
+                    {planets.map((planet) => {
+                        return (<h4>{planet.name}</h4>)
+                    })}
+                </div>
+
+                <div className="output" style={{ border: '1px solid black', padding: '35px' }}>
+                    printing Gas planets only
+                    {planets.map((planet, key) => {
+                        return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
+                    })}
+                </div>
+
+                <div style={{ marginTop: 'auto' }}>
+                    <button onClick={showOtherPlanets}>Gas planets</button>
+                </div>
+            </div>
+        </>
     )
 }
