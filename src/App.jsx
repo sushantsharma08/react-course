@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import { Home } from "./Home";
 import { UserSec } from './UserSec'
 import { PlanetsSec } from './PlanetsSec'
@@ -11,26 +11,6 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 
 const App = () => {
-
-
-  // fetch('https://retoolapi.dev/uZYGZS/data').then((res)=>res.json()).then((data)=>{
-  //   console.log(data);
-  // })
-
-  // using axios
-  
-
-  // component lifecycle and useEffect
-
-  // useEffect(() => {
-  //   console.log(`something changed`);
-
-  //   return (()=>{
-  //     // document.write('todochanged')
-  //   })
-  // },[TodoList] )
-
-
   return (
     <div className='App'>
       <Navigation />
@@ -49,6 +29,9 @@ const App = () => {
       </Routes>
       <br />
       <hr />
+      <br />
+      <h1>State Management and useContext hook</h1>
+      
     </div>
   )
 }
