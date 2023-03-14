@@ -11,10 +11,13 @@ export const UserSec = () => {
       ]
 
   return (
+    <>
+    <h3 style={{color:'gray'}}>Printing from array of Objects</h3>
     <div>
         {users.map((user, key) => {
         return <User key={key} name={user.name} age={user.age} />
       })}
     </div>
+    </>
   )
 }
