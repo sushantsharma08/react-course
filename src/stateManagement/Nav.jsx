@@ -16,10 +16,9 @@ const Nav = () => {
                 <Link to='./stateProfile'>Profile</Link>
             </li>
           </nav>
-
-            <li>
+          <div style={{display:'flex',justifyContent:'flex-end',flex:0.7}}>
               <b>{User}</b>
-            </li>
+          </div>
         </ol>
     </div>
   )
