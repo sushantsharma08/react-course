@@ -14,11 +14,10 @@ export const PlanetsSec = () => {
         { name: 'Uranus', isGasPlanet: true }
     ]
 
-    const [PlanetType, setPlanetType] = useState(planets[0].isGasPlanet)
+    const [showGasPlanets, setshowGasPlanets] = useState(true);
 
     const showOtherPlanets = () => {
-        setPlanetType(!PlanetType);
-        console.log(PlanetType);
+        setshowGasPlanets(!showGasPlanets);
     }
 
 
@@ -35,7 +34,10 @@ export const PlanetsSec = () => {
                 <div className="output" style={{ border: '1px solid black', padding: '35px' }}>
                     printing Gas planets only
                     {planets.map((planet,key) => {
-                        return <Planet key={key}  name={planet.name} isGasPlanet={planet.isGasPlanet} />
+                        if (showGasPlanets) {                return <Planet key={key}  name={planet.name} isGasPlanet={planet.isGasPlanet} />
+                        }
+                        return <Planet key={key}  name={planet.name} isGasPlanet={!planet.isGasPlanet} />
+                    
                     })}
                 </div>
                 <div style={{ marginTop: 'auto' }}>
