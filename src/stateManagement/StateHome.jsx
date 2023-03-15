@@ -2,7 +2,9 @@ import React from 'react'
 
 const StateHome = () => {
   return (
-    <div>StateHome</div>
+    <div>
+      <h3>This will be home component</h3>
+    </div>
   )
 }
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
-import StateHome from './StateHome'
-import StateProfile from './StateProfile'
-import { Route,Routes,Router} from 'react-router-dom'
+
+import {Outlet} from 'react-router-dom'
 
 const StateMangement = () => {
   return (
@@ -15,10 +14,9 @@ const StateMangement = () => {
       <div className="main" style={{ border: '1px solid black', outline: '1px solid gray', padding: '2rem' }}>
       <div className='content'>
         <Nav/>
-        <Routes>
-          <Route path='/HOME' element={<StateHome/>}/>
-          <Route path='global-state-management/stateProfile' element={<StateProfile/>}/>
-        </Routes>
+        <hr />
+        <br />
+        <Outlet />
       </div>
       </div>
 
