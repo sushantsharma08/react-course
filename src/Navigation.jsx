@@ -9,22 +9,25 @@ export const Navigation = () => {
                 <Link to='/'>Home</Link>
             </li>
             <li>
-                <Link to='/users'>Users</Link>
+                <Link to='/fetchingApis'>Api Call</Link>
             </li>
             <li>
-                <Link to='/planets'>Planets</Link>
+                <Link to='/global-state-management'>State Management</Link>
             </li>
             <li>
-                <Link to='/usestate'>useState</Link>
+                <Link to='/react-query'>React Query</Link>
             </li>
             <li>
                 <Link to='/todo'>Todo</Link>
             </li>
             <li>
-                <Link to='/fetchingApis'>Api Call</Link>
+                <Link to='/usestate'>useState</Link>
             </li>
             <li>
-                <Link to='/global-state-management'>State Management</Link>
+                <Link to='/users'>Users</Link>
+            </li>
+            <li>
+                <Link to='/planets'>Planets</Link>
             </li>
         </ul>
     </div>
