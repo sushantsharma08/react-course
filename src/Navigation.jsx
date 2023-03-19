@@ -20,6 +20,9 @@ export const Navigation = () => {
             <li>
                 <Link to='/todo'>Todo</Link>
             </li>
+            <li>
+                <Link to='/fetchingApis'>Api Call</Link>
+            </li>
         </ul>
     </div>
   )
