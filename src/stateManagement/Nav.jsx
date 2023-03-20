@@ -4,11 +4,17 @@ const Nav = () => {
   return (
     <div>
         <ol style={{listStyleType:'none',display:'flex',justifyContent:'flex-start'}}>
-            <li>
-                <Link to='/HOME'>Home</Link>
+          <nav style={{display:'flex',justifyContent:'space-evenly',flex:'0.3'}}>
+          <li>
+                <Link to='./'>Home</Link>
             </li>
             <li>
-                <Link to='global-state-management/stateProfile'>Profile</Link>
+                <Link to='./stateProfile'>Profile</Link>
+            </li>
+          </nav>
+
+            <li>
+              userInfo
             </li>
         </ol>
     </div>
