@@ -6,6 +6,7 @@ import { StateSec } from './SateSec'
 import { Todo } from './Todo'
 import { Navigation } from './Navigation'
 import FetchingApis from './FetchingApis';
+import StateMangement from './stateManagement/StateMangement';
 import { Route, Routes } from 'react-router-dom'
 
 import './App.css'
@@ -26,12 +27,12 @@ const App = () => {
         <Route path='/usestate' element={<StateSec />} />
         <Route path='/todo' element={<Todo />} />
         <Route path='/fetchingApis' element={<FetchingApis />} />
+        <Route path='/global-state-management' element={<StateMangement />} />
       </Routes>
       <br />
       <hr />
       <br />
-      <h1>State Management and useContext hook</h1>
-      
+
     </div>
   )
 }

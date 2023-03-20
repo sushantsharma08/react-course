@@ -23,6 +23,9 @@ export const Navigation = () => {
             <li>
                 <Link to='/fetchingApis'>Api Call</Link>
             </li>
+            <li>
+                <Link to='/global-state-management'>State Management</Link>
+            </li>
         </ul>
     </div>
   )
