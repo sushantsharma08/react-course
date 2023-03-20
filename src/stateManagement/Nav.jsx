@@ -1,6 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
+import { UserContext } from './StateMangement';
+
 const Nav = () => {
+  const {User} = useContext(UserContext);
+
   return (
     <div>
         <ol style={{listStyleType:'none',display:'flex',justifyContent:'flex-start'}}>
@@ -14,7 +18,7 @@ const Nav = () => {
           </nav>
 
             <li>
-              userInfo
+              <b>{User}</b>
             </li>
         </ol>
     </div>
