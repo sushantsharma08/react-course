@@ -13,14 +13,15 @@ ul {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
-  background-color: rgb(196, 211, 211);
+  background-color: rgba(196, 211, 211, 0.205);
   padding: 1rem;
 }
 li{
   text-decoration: none;
   margin-inline: 2px;
-  padding-inline: 0px;
+  padding-inline: 3px;
   margin: auto;
+  background-color: rgba(0, 0, 0, 0.137);
 }
 button{
   margin: 15px;
