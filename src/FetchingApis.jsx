@@ -26,7 +26,7 @@ const FetchingApis = () => {
     return (
         <>
             <h2>People and their excuses</h2>
-            <div style={{ textAlign: 'left', margin: 'auto' }}>
+            <div style={{ textAlign: 'left', margin: 'auto',padding:'1rem' }}>
                 <b>Uid:</b> {data.id}
                 <br />
                 <b>Excuse:</b> {data.excuse}

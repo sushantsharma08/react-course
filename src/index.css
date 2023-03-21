@@ -1,0 +1,9 @@
+body{
+    margin: 0;padding: 0;
+
+}
+.mainBody{
+    min-height: 100vh;
+    min-width: 100vw;
+    /* background:linear-gradient(60deg,rgb(98, 109, 107),rgb(82, 71, 71),rgb(77, 77, 77)) ; */
+}
