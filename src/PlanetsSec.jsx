@@ -19,13 +19,6 @@ export const PlanetsSec = () => {
             console.log(p.name, p.isGasPlanet);
         }
         )
-        // document.querySelector('.output').innerHTML(
-        //     <div>
-        //     {planets.map((planet, key) => {
-        //         return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
-        //     })}
-        // </div>
-        // )
     }
 
     useEffect(() => {
