@@ -28,7 +28,7 @@ const App = () => {
         <Route path='/planets' element={<PlanetsSec />} />
         <Route path='/usestate' element={<StateSec />} />
         <Route path='/todo' element={<Todo />} />
-        <Route path='/fetchingApi-s' element={<FetchingApis />} />
+        <Route path='/fetchingApis' element={<FetchingApis />} />
         <Route path='/global-state-management' element={<StateMangement />} >
           <Route path='' element={<StateHome />} />
           <Route path='stateProfile' element={<StateProfile />} />
