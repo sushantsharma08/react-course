@@ -33,7 +33,7 @@ const App = () => {
           <Route path='' element={<StateHome />} />
           <Route path='stateProfile' element={<StateProfile />} />
         </Route>
-        <Route path='/react-query' element={ReactQuery} />
+        {/* <Route path='/react-query' element={ReactQuery} /> */}
       </Routes>
       <br />
       <hr />
