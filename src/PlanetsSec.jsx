@@ -40,7 +40,7 @@ export const PlanetsSec = () => {
                     
                     })}
                 </div>
-                <div style={{ marginTop: 'auto' }}>
+                <div style={{ marginbottom: 'auto' }}>
                     <button onClick={showOtherPlanets}>Gas planets</button>
                 </div>
             </div>
