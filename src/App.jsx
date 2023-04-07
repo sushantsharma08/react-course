@@ -15,6 +15,7 @@ import { Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import './App.css'
+import ReactForms from './ReactForms';
 const client = new QueryClient();
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
             <Route path='stateProfile' element={<StateProfile />} />
           </Route>
           <Route path='/react-query' element={<ReactQuery/>} />
+          <Route path='/forms' element={<ReactForms/>} />
         </Routes>
       </QueryClientProvider>
       <br />

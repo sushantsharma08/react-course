@@ -11,7 +11,7 @@ const FetchingApis = () => {
             setdata(res.data[0]);
             console.log(res.data);
         })
-    }
+    }    
 
     const [Name, setName] = useState("");
     const [Prediction, setPrediction] = useState(null)
