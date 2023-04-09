@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 
-import { Task } from './Task'
+import { Task } from '../components/Task'
 
 export const Todo = () => {
 

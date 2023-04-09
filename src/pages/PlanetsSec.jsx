@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Planet } from './Planet'
+import { Planet } from '../components/Planet'
 
 
 export const PlanetsSec = () => {

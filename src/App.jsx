@@ -1,21 +1,21 @@
 import React from 'react'
-import { Home } from "./Home";
-import { UserSec } from './UserSec'
-import { PlanetsSec } from './PlanetsSec'
-import { StateSec } from './SateSec'
-import { Todo } from './Todo'
-import { Navigation } from './Navigation'
-import FetchingApis from './FetchingApis';
+import { Home } from "./pages/Home";
+import { UserSec } from './pages/UserSec'
+import { PlanetsSec } from './pages/PlanetsSec'
+import { StateSec } from './pages/SateSec'
+import { Todo } from './pages/Todo'
+import { Navigation } from './components/Navigation'
+import FetchingApis from './pages/FetchingApis';
 import StateMangement from './stateManagement/StateMangement';
 import StateHome from './stateManagement/StateHome'
 import StateProfile from './stateManagement/StateProfile'
-import ReactQuery from './ReactQuery';
+import ReactQuery from './pages/ReactQuery';
 import { Route, Routes } from 'react-router-dom'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import './App.css'
-import ReactForms from './ReactForms';
+import ReactForms from './pages/ReactForms';
 const client = new QueryClient();
 
 const App = () => {
