@@ -15,9 +15,10 @@ export const PlanetsSec = () => {
     ]
 
     const [showGasPlanets, setshowGasPlanets] = useState(true);
-
+    const [Clicked, setClicked] = useState(false)
     const showOtherPlanets = () => {
         setshowGasPlanets(!showGasPlanets);
+        setClicked(!Clicked)
     }
 
 
@@ -32,16 +33,18 @@ export const PlanetsSec = () => {
                 </div>
 
                 <div className="output" style={{ border: '1px solid black', padding: '35px' }}>
-                    printing Gas planets only
-                    {planets.map((planet,key) => {
-                        if (showGasPlanets) {                return <Planet key={key}  name={planet.name} isGasPlanet={planet.isGasPlanet} />
+
+                    {Clicked ? "Printing Non Gas planets only" : "Printing Gas planets only"}
+                    {planets.map((planet, key) => {
+                        if (showGasPlanets) {
+                            return <Planet key={key} name={planet.name} isGasPlanet={planet.isGasPlanet} />
                         }
-                        return <Planet key={key}  name={planet.name} isGasPlanet={!planet.isGasPlanet} />
-                    
+                        return <Planet key={key} name={planet.name} isGasPlanet={!planet.isGasPlanet} />
+
                     })}
                 </div>
                 <div style={{ marginbottom: 'auto' }}>
-                    <button onClick={showOtherPlanets}>Gas planets</button>
+                    <button onClick={showOtherPlanets}>{Clicked ? "Show Gas planets" : "Show Non Gaseous Planets"}</button>
                 </div>
             </div>
         </>
